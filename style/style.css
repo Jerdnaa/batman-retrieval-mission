@@ -55,22 +55,31 @@ table {
     align-items: center;
     height: 100vh;
     background-image: url("/images/vecteezy_neon-cityscape-cyber-smart-city-vector-flat-design_19851039.jpg");
+    display: none;
 }
 
 .start-screen h1 {
     font-size: 4.3rem;
-    color: #e3c840;
+    color: #FDE311;
+}
+
+.start-screen img {
+    height: 4.3rem;
+    width: 4.3rem;
+    position: absolute;
+    top: 126px;
+    right: 560px;
 }
 
 .start-screen p {
     font-size: 1.7rem;
-    color: #e3c840;
+    color: #FDE311;
 }
 
 .start-game-button {
     padding: 1.3rem 3rem;
     border: none;
-    background-color: #e3c840;
+    background-color: #FDE311;
     border-radius: 5px;
     font-family: "Luckiest Guy", cursive;
     font-size: 1.8rem;
@@ -78,4 +87,18 @@ table {
 
 .start-game-button:hover {
     background-color: #d4193f;
+    font-size: 2rem;
+    transition: font-size .3s ease-in;
+    margin: 0;
+} 
+
+.boss-one {
+    height: 100vh;
+    background-image: url("/images/boss1.jpg");
+    background-size: contain;
+}
+
+.boss-one img {
+    background: none;
+    height: 200px;
 }
