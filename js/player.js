@@ -15,4 +15,17 @@ class Player {
 
         this.gameScreen.appendChild(this.element);
     }
+
+    movement(){
+        this.left += this.directionX;
+        this.updatePosition();
+
+        if (this.left < 10) {
+            this.left = 10;
+        }
+    }
+
+    updatePosition() {
+        this.element.style.left = `${this.left}px`
+    }
 }

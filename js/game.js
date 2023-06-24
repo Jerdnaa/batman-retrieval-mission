@@ -9,5 +9,18 @@ class Game {
     start(){
         this.startScreen.style.display = "none";
         this.firstBoss.style.display = "flex";
+        this.gameLoop();
+    }
+
+    gameLoop() {
+        if (this.isGameOver) {
+            return;
+        }
+        this.update();
+        requestAnimationFrame(() => this.gameLoop());
+    }
+
+    update(){
+        this.player.movement();
     }
 }
