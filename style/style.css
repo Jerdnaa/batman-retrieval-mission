@@ -55,7 +55,7 @@ table {
     align-items: center;
     height: 100vh;
     background-image: url("/images/vecteezy_neon-cityscape-cyber-smart-city-vector-flat-design_19851039.jpg");
-    display: none;
+    /* display: none; */
 }
 
 .start-screen h1 {
@@ -96,9 +96,12 @@ table {
     height: 100vh;
     background-image: url("/images/boss1.jpg");
     background-size: contain;
+    display: none;
 }
 
-.boss-one img {
-    background: none;
+.voldy {
     height: 200px;
+    position: absolute;
+    bottom: 95px;
+    right: 20px;
 }

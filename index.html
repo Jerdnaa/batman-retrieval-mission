@@ -14,16 +14,23 @@
   </head>
   <body>
     <main>
-      <div class="start-screen">
+      <div class="start-screen" id="start-screen">
         <h1>BATMAN RETRIEVAL MISSION</h1>
         <img
           src="/images/vecteezy_batman-logo-png-batman-icon-logo-transparent-png_24806497_796.png"
           alt="batman logo"
         />
         <p>Oh no! It looks like Batman needs your help</p>
-        <button type="button" class="start-game-button">START MISSION</button>
+        <button type="button" class="start-game-button" id="start-btn">
+          START MISSION
+        </button>
       </div>
-      <div class="boss-one"></div>
+      <div class="boss-one" id="first-boss">
+        <img src="/images/voldy.png" alt="voldy" class="voldy" />
+      </div>
     </main>
+    <script src="js/player.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
