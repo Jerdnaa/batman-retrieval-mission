@@ -3,6 +3,7 @@ class Game {
         this.startScreen = document.getElementById("start-screen");
         this.firstBoss = document.getElementById("first-boss");
         this.player = new Player(this.firstBoss);
+        this.quiz = new Quiz();
         this.isGameOver = false;
     }
 

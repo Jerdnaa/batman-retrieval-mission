@@ -50,25 +50,57 @@ class Quiz {
             choices: ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
             rightAnswer: "Pacific Ocean"
           }];
+        this.currentQuestionIndex = null;
         this.question = document.getElementById("question")
-        this.choices = document.getElementById("answers");
+        this.choices = document.querySelector("#answers");
         this.answer = null;
-
-        const random = Math.floor(Math.random() * this.questions.length);
-        this.currentQuestion = this.questions[random];
-        this.question.innerHTML = this.currentQuestion.question;
-        this.updateChoices();
+        this.quizScreen = document.querySelector(".quiz")
+        this.selectedAnswer = null;
+        this.correctAnswerCount = 0;
+        this.firstBoss = document.getElementById("first-boss");
+        this.gameOver = document.getElementById("game-over");
     }
 
+    
     updateChoices(){
+        this.quizScreen.style.display = "flex";
+        const random = Math.floor(Math.random() * this.questions.length);
+        this.currentQuestionIndex = random;
+        const chosenQuestion = this.questions[random];
+        const theQuestion = chosenQuestion.question;
+        const answerArr = chosenQuestion.choices;
+        const p = this.question
+        p.innerHTML = theQuestion;
         this.choices.innerHTML = "";
-        this.currentQuestion.choices.forEach((choice) => {
-            const choiceElement = document.createElement("p");
-            choiceElement.innerHTML = choice;
-            choiceElement.addEventListener("click", () => {
-                this.answer = choice;
+        answerArr.forEach((choice) => {
+            const oneAnswer = document.createElement("button");
+            oneAnswer.innerHTML = choice;
+            this.choices.appendChild(oneAnswer);
+            oneAnswer.addEventListener("click", () => {
+                this.selectedAnswer = choice;
+                this.checkAnswer();
             })
-            this.choicesElement.appendChild(choiceElement);
-        })
+        }) 
     }
+
+    checkAnswer() {
+        const currentQuestion = this.questions[this.currentQuestionIndex];
+        const correctAnswer = currentQuestion.rightAnswer;
+
+        if (this.selectedAnswer === correctAnswer) {
+            this.correctAnswerCount++;
+            console.log(this.correctAnswerCount);
+            if(this.correctAnswerCount === 1 || this.correctAnswerCount === 2) {
+                this.selectedAnswer = null;
+                this.updateChoices();
+            } else if (this.correctAnswerCount === 3) {
+                console.log("Going to the next level pog")
+            } 
+        } else if (this.selectedAnswer !== correctAnswer) {
+          console.log("Game Over");
+          this.firstBoss.style.display = "none";
+          this.gameOver.style.display = "flex";
+        }
+    }
+
 }

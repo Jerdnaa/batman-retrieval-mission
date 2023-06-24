@@ -6,6 +6,8 @@ class Player {
         this.left = 20;
         this.directionX = 0;
         this.element = document.createElement("img");
+        this.quiz = new Quiz();
+        this.hasQuestionDisplayed = false;
 
         this.element.src = "../images/spongebob.png";
         this.element.style.position = "absolute";
@@ -22,6 +24,11 @@ class Player {
 
         if (this.left < 10) {
             this.left = 10;
+        }
+
+        if (this.left > 1500 && !this.hasQuestionDisplayed) {
+            this.quiz.updateChoices();
+            this.hasQuestionDisplayed = true;
         }
     }
 
