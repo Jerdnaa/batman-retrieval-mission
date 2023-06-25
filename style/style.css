@@ -55,7 +55,7 @@ table {
     align-items: center;
     height: 100vh;
     background-image: url("/images/vecteezy_neon-cityscape-cyber-smart-city-vector-flat-design_19851039.jpg");
-    display: none;
+    /* display: none; */
 }
 
 .start-screen h1 {
@@ -194,10 +194,10 @@ table {
     transition: font-size .1s ease-in;
 }
 
-.boss-two {
+.room-one {
     height: 100vh;
     background: linear-gradient(93deg, rgba(189,51,212,1) 0%, rgba(255,255,255,1) 75%, rgba(255,255,255,1) 100%);
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
@@ -236,12 +236,80 @@ table {
     border-left-color: #ff0000; 
   }
 
-.boss-two p {
+.room-one p {
     text-align: center;
     font-size: 3rem;
     padding-top: 40px;
 }
 
-.boss-two img {
+.buff-sponge {
     transform: rotateY(180deg);
 }
+
+.room-two {
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.room-two p {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-top: 40px;
+}
+
+.timer {
+    border: 3px solid black;
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.switch:hover {
+    color: red;
+}
+
+.room-three {
+    height: 100vh;
+    background-image: url("/images/minecraft.jpg");
+    background-size: cover;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.room-three p {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.toFinalBossBtn {
+    font-family: "Luckiest Guy", cursive;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 4px;
+    background-color: #4a9cdb;
+    color: #fff;
+    box-shadow: 0 2px 0 #2665a3;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    letter-spacing: 3px;
+}
+
+.toFinalBossBtn:hover {
+    background-color: #64b2ff;
+    transform: scale(1.05);
+}
+
+.toFinalBossBtn:active {
+    background-color: #2665a3;
+    box-shadow: none;
+    transform: translateY(2px);
+}
+    

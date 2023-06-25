@@ -58,7 +58,7 @@ class Quiz {
       this.selectedAnswer = null;
       this.correctAnswerCount = 0;
       this.firstBoss = document.getElementById("first-boss");
-      this.secondBoss = document.getElementById("second-boss")
+      this.roomOne = document.querySelector(".room-one")
       this.gameOver = document.getElementById("game-over");
   }
 
@@ -97,7 +97,7 @@ class Quiz {
           } else if (this.correctAnswerCount === 3) {
               console.log("Going to the next level pog")
               this.firstBoss.style.display = "none";
-              this.secondBoss.style.display = "block";
+              this.roomOne.style.display = "flex";
           } 
       } else if (this.selectedAnswer !== correctAnswer) {
         console.log("Game Over");

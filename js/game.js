@@ -5,6 +5,11 @@ class Game {
         this.player = new Player(this.firstBoss);
         this.quiz = new Quiz();
         this.isGameOver = false;
+        this.timer = document.querySelector(".timer");
+        this.timeRemaining = 10;
+        this.gameOver = document.getElementById("game-over");
+        this.roomTwo = document.querySelector(".room-two")
+        this.timeIntervalId = null;
     }
 
     start(){
@@ -12,6 +17,27 @@ class Game {
         this.firstBoss.style.display = "flex";
         this.gameLoop();
     }
+
+    startTimer() {
+        if (!this.timerIntervalId) {
+            this.timerIntervalId = setInterval(() => {
+              this.timeRemaining--;
+              this.timer.textContent = this.timeRemaining;
+      
+              if (this.timeRemaining === 0) {
+                this.roomTwo.style.display = "none";
+                this.gameOver.style.display = "flex";
+                clearInterval(this.timerIntervalId);
+                this.timerIntervalId = null;
+              }
+            }, 1000);
+          }
+    }
+
+    stopTimer() {
+        clearInterval(this.timerIntervalId);
+        this.timerIntervalId = null;
+      }
 
     gameLoop() {
         if (this.isGameOver) {
