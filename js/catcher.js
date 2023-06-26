@@ -4,6 +4,7 @@ class Catcher {
         this.gameOverScreen = document.querySelector(".game-over-screen")
         this.catchGameStart = document.querySelector(".catchStartScreen")
         this.catchGameScreen = document.querySelector(".catchGameScreen")
+        this.endScreen = document.querySelector(".endScreen");
         this.lava = document.querySelector(".lava");
         this.cat = document.createElement("img")
         this.basket = document.createElement("img")
@@ -115,6 +116,7 @@ class Catcher {
 
         endGame() {
             this.finalBoss.style.display = "none";
+            this.endScreen.style.display = "block";
             clearInterval(this.catRainIntervalId);
         }
       

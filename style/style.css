@@ -386,4 +386,10 @@ table {
     height: 70px;
     background: radial-gradient(circle, #FF3300 10%, #FF6600 30%, #FF3300 60%);
 }
+
+.endScreen {
+    display: none;
+    height: 100vh;
+    background-color: #2665a3;
+}
     
