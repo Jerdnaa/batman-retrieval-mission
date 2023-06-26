@@ -343,6 +343,49 @@ table {
     height: 400px;
     position: absolute;
     bottom: 75px;
-    right: 20px;
+    right: 0px;
+}
+
+.catchStartScreen {
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.catchStartBtn {
+    font-family: "Luckiest Guy", cursive;
+    font-size: 1.8rem;
+    color: red;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    transform: rotate(10deg);
+}
+
+.catchStartBtn:hover {
+    font-size: 2rem;
+    transform: rotate(-10deg);
+    color:#2665a3;
+    transition: transform .1s linear;
+}
+
+.catchGameScreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.above-lava {
+    background-color: blue;
+    height: 630px;
+    width: 100%;
+}
+
+.lava {
+    width: 100%;
+    height: 70px;
+    background: radial-gradient(circle, #FF3300 10%, #FF6600 30%, #FF3300 60%);
 }
     
