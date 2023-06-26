@@ -55,7 +55,7 @@ table {
     align-items: center;
     height: 100vh;
     background-image: url("/images/vecteezy_neon-cityscape-cyber-smart-city-vector-flat-design_19851039.jpg");
-    display: none;
+    /* display: none; */
 }
 
 .start-screen h1 {
@@ -317,9 +317,7 @@ table {
     height: 100vh;
     background-image: url("/images/mordor.jpeg");
     background-size: cover;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
+    display: none;
 }
 
 .catchGame {
@@ -348,7 +346,7 @@ table {
 
 .catchStartScreen {
     height: 100%;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -371,7 +369,7 @@ table {
 }
 
 .catchGameScreen {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;

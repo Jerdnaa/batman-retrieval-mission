@@ -7,10 +7,10 @@ window.addEventListener("load", () => {
     const roomThree = document.querySelector(".room-three");
     const switchBtn = document.querySelector(".switch");
     const startCatchBtn = document.querySelector(".catchStartBtn");
-    const catchStartScreen = document.querySelector(".catchStartScreen");
-    const catchGameScreen = document.querySelector(".catchGameScreen")
+    const toFinalBossBtn = document.querySelector(".toFinalBossBtn");
+    const finalBoss = document.querySelector(".finalBoss")
     let game = new Game();
-    let quiz = new Quiz();
+    let catcher = new Catcher();
 
     startBtn.addEventListener("click", () => {
         startGame();
@@ -26,6 +26,11 @@ window.addEventListener("load", () => {
         game.startTimer();
     })
 
+    toFinalBossBtn.addEventListener("click", () => {
+        roomThree.style.display = "none"
+        finalBoss.style.display = "block"
+    })
+
     switchBtn.addEventListener("click", () => {
         roomTwo.style.display = "none"
         roomThree.style.display = "flex"
@@ -33,9 +38,7 @@ window.addEventListener("load", () => {
     })
 
     startCatchBtn.addEventListener("click", () => {
-        catchStartScreen.style.display = "none"
-        catchGameScreen.style.display = "block"
-
+        catcher.startCatchGame();
     })
 
     function startGame() {
