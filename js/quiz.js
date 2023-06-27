@@ -49,7 +49,73 @@ class Quiz {
           question: "What is the largest ocean on Earth?",
           choices: ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
           rightAnswer: "Pacific Ocean"
-        }];
+        },
+        {
+          question: "What is the symbol for the element oxygen?",
+          choices: ["Ox", "Og", "O", "Om"],
+          rightAnswer: "O"
+        },
+        {
+          question: "Which planet is known as the 'Morning Star'?",
+          choices: ["Venus", "Mars", "Mercury", "Jupiter"],
+          rightAnswer: "Venus"
+        },
+        {
+          question: "Which country is famous for the Taj Mahal?",
+          choices: ["India", "China", "Egypt", "Italy"],
+          rightAnswer: "India"
+        },
+        {
+          question: "What is the largest internal organ in the human body?",
+          choices: ["Heart", "Brain", "Liver", "Lungs"],
+          rightAnswer: "Liver"
+        },
+        {
+          question: "Who wrote the play 'Romeo and Juliet'?",
+          choices: ["William Shakespeare", "Jane Austen", "Charles Dickens", "Mark Twain"],
+          rightAnswer: "William Shakespeare"
+        },
+        {
+          question: "What is the highest mountain range in the world?",
+          choices: ["Rocky Mountains", "Andes Mountains", "Himalayas", "Alps"],
+          rightAnswer: "Himalayas"
+        },
+        {
+          question: "What is the capital city of Canada?",
+          choices: ["Toronto", "Ottawa", "Vancouver", "Montreal"],
+          rightAnswer: "Ottawa"
+        },
+        {
+          question: "What is the chemical symbol for sodium?",
+          choices: ["Sa", "So", "Na", "Sd"],
+          rightAnswer: "Na"
+        },
+        {
+          question: "Which planet is known as the 'Giant Planet'?",
+          choices: ["Mars", "Jupiter", "Venus", "Mercury"],
+          rightAnswer: "Jupiter"
+        },
+        {
+          question: "Which country is famous for the Great Wall?",
+          choices: ["China", "Japan", "India", "United States"],
+          rightAnswer: "China"
+        },
+        {
+          question: "What is the chemical symbol for iron?",
+          choices: ["Ir", "Fe", "In", "Io"],
+          rightAnswer: "Fe"
+        },
+        {
+          question: "Who wrote the novel 'To Kill a Mockingbird'?",
+          choices: ["Harper Lee", "J.K. Rowling", "George Orwell", "F. Scott Fitzgerald"],
+          rightAnswer: "Harper Lee"
+        },
+        {
+          question: "What is the largest planet in our solar system?",
+          choices: ["Jupiter", "Saturn", "Neptune", "Mars"],
+          rightAnswer: "Jupiter"
+        }
+      ];
       this.currentQuestionIndex = null;
       this.question = document.getElementById("question")
       this.choices = document.querySelector("#answers");
