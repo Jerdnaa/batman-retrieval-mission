@@ -14,7 +14,7 @@ class Catcher {
         this.catRainIntervalId = null;
         
 
-        this.basket.src = "../images/basket.png"
+        this.basket.src = "./images/basket.png"
         this.basket.style.height = "90px";
         this.basket.style.position = "absolute"
         this.basket.style.bottom = "45px";
@@ -55,7 +55,7 @@ class Catcher {
     catRain() {
         this.catRainIntervalId = setInterval(() => {
             const cat = document.createElement("img");
-            cat.src = "../images/cat.png";
+            cat.src = "./images/cat.png";
             cat.style.height = "90px";
             cat.style.position = "absolute";
             cat.style.top = "-90px";

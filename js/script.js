@@ -8,7 +8,10 @@ window.addEventListener("load", () => {
     const switchBtn = document.querySelector(".switch");
     const startCatchBtn = document.querySelector(".catchStartBtn");
     const toFinalBossBtn = document.querySelector(".toFinalBossBtn");
-    const finalBoss = document.querySelector(".finalBoss")
+    const finalBoss = document.querySelector(".finalBoss");
+    const endScreen = document.querySelector(".endScreen");
+    const endCredits = document.querySelector(".endCredits")
+    const theEndBtn = document.querySelector(".theEndBtn")
     let game = new Game();
     let catcher = new Catcher();
 
@@ -41,6 +44,11 @@ window.addEventListener("load", () => {
         catcher.startCatchGame();
     })
 
+     theEndBtn.addEventListener("click", () => {
+         endScreen.style.display = "none";
+         endCredits.style.display = "block";
+     })
+
     function startGame() {
         // game = new Game();
         game.start();
@@ -63,5 +71,4 @@ window.addEventListener("load", () => {
             game.player.directionX = 0;
         }
     });
- 
 })

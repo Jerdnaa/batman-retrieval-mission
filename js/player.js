@@ -9,7 +9,7 @@ class Player {
         this.quiz = new Quiz();
         this.hasQuestionDisplayed = false;
 
-        this.element.src = "../images/spongebob.png";
+        this.element.src = "./images/spongebob.png";
         this.element.style.position = "absolute";
         this.element.style.height = `${this.height}px`;
         this.element.style.bottom = `${this.bottom}px`;
