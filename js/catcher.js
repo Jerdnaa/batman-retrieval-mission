@@ -20,7 +20,7 @@ class Catcher {
         this.basket.style.bottom = "45px";
         this.basket.style.left = `${this.leftBasket}px`
 
-        this.cat.src = "../images/cat.png"
+        this.cat.src = "./images/cat.png"
         this.cat.style.height = "90px";
         
         

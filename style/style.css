@@ -54,8 +54,8 @@ table {
     justify-content: space-around;
     align-items: center;
     height: 100vh;
-    background-image: url("./images/vecteezy_neon-cityscape-cyber-smart-city-vector-flat-design_19851039.jpg");
-    display: none;
+    background-image: url("../images/vecteezy_neon-cityscape-cyber-smart-city-vector-flat-design_19851039.jpg");
+    /* display: none; */
 }
 
 .start-screen h1 {
@@ -94,7 +94,7 @@ table {
 
 .boss-one {
     height: 100vh;
-    background-image: url("./images/boss1.jpg");
+    background-image: url("../images/boss1.jpg");
     background-size: contain;
     display: none;
 }
@@ -273,7 +273,7 @@ table {
 
 .room-three {
     height: 100vh;
-    background-image: url("./images/minecraft.jpg");
+    background-image: url("../images/minecraft.jpg");
     background-size: cover;
     display: none;
     flex-direction: column;
@@ -315,7 +315,7 @@ table {
 
 .finalBoss {
     height: 100vh;
-    background-image: url("./images/mordor.jpeg");
+    background-image: url("../images/mordor.jpeg");
     background-size: cover;
     display: none;
 }
@@ -388,7 +388,7 @@ table {
 }
 
 .endScreen {
-    /* display: none; */
+    display: none;
     height: 100vh;
     background: linear-gradient(93deg, rgba(224,48,17,1) 0%, rgba(221,167,17,1) 27%, rgba(81,237,73,1) 100%);
 }
