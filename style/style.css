@@ -349,6 +349,7 @@ table {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url("../images/cat-in-lava.jpg");
 }
 
 .catchStartBtn {
@@ -390,12 +391,25 @@ table {
 .endScreen {
     display: none;
     height: 100vh;
-    background: linear-gradient(93deg, rgba(224,48,17,1) 0%, rgba(221,167,17,1) 27%, rgba(81,237,73,1) 100%);
+    background: linear-gradient(93deg, rgba(224,48,17,1) 0%, rgba(221,167,17,1) 27%, rgba(81,237,73,1) 100%);font-family: "Luckiest Guy", cursive;
 }
 
-/* .theEndBtn {
-    
-} */
+.theEndBtn {
+    margin: 0 auto;
+    font-family: "Luckiest Guy", cursive;
+    position: absolute;
+    bottom: 80px;
+    left: 825px;
+    font-size: 3rem;
+    border: none;
+    background-color: transparent;
+}
+
+.theEndBtn:hover {
+    font-size: 3.2rem;
+    color: #ff0000;
+    transform: rotate(2deg);
+}
 
 .homemade-creeper {
     height: 300px;
@@ -463,5 +477,57 @@ table {
     }
   }
 
+  .endCredits {
+    height: 100vh;
+    background: linear-gradient(145deg, rgba(191,224,17,1) 0%, rgba(221,167,17,1) 36%, rgba(0,0,0,1) 78%, rgba(0,0,0,1) 100%);;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+  }
+
+  .endCredits h1 {
+    font-size: 3.5rem;
+  }
+
+  .endCredits h2 {
+    font-size: 2rem;
+  }
+
+  .patreon {
+    color: #1fcbe3;
+  }
+
+  .play-again-button {
+    font-family: "Luckiest Guy", cursive;
+    font-size: 3rem;
+    border: none;
+    background-color: transparent;
+    color: white;
+  }
+
+  .play-again-button:hover {
+    color: #ff0000;
+    transform: rotate(2deg);
+  }
+
+  .batman {
+    height: 200px;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+  }
+  .cage {
+    height: 240px;
+    position: absolute;
+    bottom: 24px;
+    right: 43px;
+  }
+
+  iframe {
+    height: 1px;
+    width: 1px;
+  }
 
     

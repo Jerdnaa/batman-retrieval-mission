@@ -10,8 +10,10 @@ window.addEventListener("load", () => {
     const toFinalBossBtn = document.querySelector(".toFinalBossBtn");
     const finalBoss = document.querySelector(".finalBoss");
     const endScreen = document.querySelector(".endScreen");
-    const endCredits = document.querySelector(".endCredits")
-    const theEndBtn = document.querySelector(".theEndBtn")
+    const endCredits = document.querySelector(".endCredits");
+    const theEndBtn = document.querySelector(".theEndBtn");
+    const playAgain = document.querySelector(".play-again-button");
+
     let game = new Game();
     let catcher = new Catcher();
 
@@ -19,7 +21,12 @@ window.addEventListener("load", () => {
         startGame();
     })
 
+
     restartBtn.addEventListener("click", () => {
+        location.reload();
+    })
+
+    playAgain.addEventListener("click", () => {
         location.reload();
     })
 
@@ -46,7 +53,7 @@ window.addEventListener("load", () => {
 
      theEndBtn.addEventListener("click", () => {
          endScreen.style.display = "none";
-         endCredits.style.display = "block";
+         endCredits.style.display = "flex";
      })
 
     function startGame() {
