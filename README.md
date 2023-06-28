@@ -106,3 +106,8 @@ Batman Retrieval Mission is the first instalment of a series in which the main o
 - didCollide();
 - endGame();
 - getRandomPosition();
+
+## Links
+
+- [Deployment](https://jerdnaa.github.io/batman-retrieval-mission/)
+- [GitHub Repository](https://github.com/Jerdnaa/batman-retrieval-mission)
