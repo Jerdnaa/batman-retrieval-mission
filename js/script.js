@@ -23,6 +23,7 @@ window.addEventListener("load", () => {
 
     startBtn.addEventListener("click", () => {
         startGame();
+        audio.play();
     })
 
 
