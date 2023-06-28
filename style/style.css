@@ -67,7 +67,7 @@ table {
     height: 4.3rem;
     width: 4.3rem;
     position: absolute;
-    top: 126px;
+    top: 132px;
     right: 560px;
 }
 
@@ -352,14 +352,15 @@ table {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("../images/cat-in-lava.jpg");
+    background-image: url("../images/cat-in-lava.png");
+    background-size: cover;
 }
 
 .catchStartBtn {
     font-family: "Luckiest Guy", cursive;
     font-size: 1.8rem;
-    color: red;
-    background-color: white;
+    color: #FDE311;
+    background-color: black;
     border: 1px solid black;
     border-radius: 10px;
     transform: rotate(10deg);
