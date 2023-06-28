@@ -12,6 +12,9 @@ class Catcher {
         this.cats = [];
         this.catsCought = 0;
         this.catRainIntervalId = null;
+        this.audio = document.querySelector(".finalBossMusic");
+        this.quiz = new Quiz();
+        this.endScreenAudio = document.getElementById("endScreenAudio")
         
 
         this.basket.src = "./images/basket.png"
@@ -104,6 +107,9 @@ class Catcher {
                 if (catRect.bottom >= lavaRect.top) {
                         this.finalBoss.style.display = "none";
                         this.gameOverScreen.style.display = "flex";
+                        this.quiz.audio.pause();
+                        this.quiz.loseAudio.play();
+                        clearInterval(this.catRainIntervalId);
                     } else {
                         this.catsCought += 1;
                         console.log(this.catsCought);
@@ -118,6 +124,8 @@ class Catcher {
             this.finalBoss.style.display = "none";
             this.endScreen.style.display = "block";
             clearInterval(this.catRainIntervalId);
+            this.quiz.audio.pause();
+            this.endScreenAudio.play();
         }
       
         getRandomPosition() {

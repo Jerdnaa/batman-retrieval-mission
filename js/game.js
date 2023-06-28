@@ -29,6 +29,8 @@ class Game {
                 this.gameOver.style.display = "flex";
                 clearInterval(this.timerIntervalId);
                 this.timerIntervalId = null;
+                this.quiz.audio.pause();
+                this.quiz.loseAudio.play();
               }
             }, 1000);
           }

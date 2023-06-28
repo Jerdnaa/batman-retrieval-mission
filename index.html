@@ -25,6 +25,12 @@
           START MISSION
         </button>
       </div>
+      <audio
+        id="audio"
+        autoplay
+        loop
+        src="./sound/685320__robbnix__dark-ambient-melody.wav"
+      ></audio>
       <div class="boss-one" id="first-boss">
         <img src="./images/voldy.png" alt="voldy" class="voldy" />
         <div class="quiz">
@@ -40,6 +46,10 @@
         </div>
       </div>
       <div class="game-over-screen" id="game-over">
+        <audio
+          id="loseAudio"
+          src="./sound/535236__grizzlymittz__you-lose.mp3"
+        ></audio>
         <h1>GAME OVER</h1>
         <img src="./images/game-over.png" alt="game over" />
         <button id="restart-btn">RESTART</button>
@@ -94,6 +104,10 @@
         <img src="./images/creeper.png" alt="creeper" class="creeper" />
       </div>
       <div class="endScreen">
+        <audio
+          id="endScreenAudio"
+          src="./sound/83207__smokum__explosion12.wav"
+        ></audio>
         <img
           src="./images/home-made-creeper.png"
           alt="creeper"
@@ -109,6 +123,10 @@
         <button class="theEndBtn">END OF PART 1</button>
       </div>
       <div class="endCredits">
+        <audio
+          id="creditMusic"
+          src="./sound/560446__migfus20__happy-background-music.mp3"
+        ></audio>
         <h1>Thanks For Playing!</h1>
         <h2>Part 2 Comes Out In May 2025</h2>
         <button class="play-again-button">Restart</button>
@@ -123,9 +141,9 @@
       </div>
     </main>
     <script src="js/player.js"></script>
-    <script src="js/catcher.js"></script>
     <script src="js/key.js"></script>
     <script src="js/quiz.js"></script>
+    <script src="js/catcher.js"></script>
     <script src="js/game.js"></script>
     <script src="js/script.js"></script>
   </body>

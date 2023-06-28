@@ -13,6 +13,10 @@ window.addEventListener("load", () => {
     const endCredits = document.querySelector(".endCredits");
     const theEndBtn = document.querySelector(".theEndBtn");
     const playAgain = document.querySelector(".play-again-button");
+    const audio = document.getElementById("audio");
+    const endAudio = document.getElementById("creditMusic");
+    const explosionAudio = document.getElementById("endScreenAudio")
+    audio.volume = 0.1;
 
     let game = new Game();
     let catcher = new Catcher();
@@ -39,6 +43,7 @@ window.addEventListener("load", () => {
     toFinalBossBtn.addEventListener("click", () => {
         roomThree.style.display = "none"
         finalBoss.style.display = "block"
+        catcher.playAudio();
     })
 
     switchBtn.addEventListener("click", () => {
@@ -54,7 +59,10 @@ window.addEventListener("load", () => {
      theEndBtn.addEventListener("click", () => {
          endScreen.style.display = "none";
          endCredits.style.display = "flex";
+         explosionAudio.pause();
+         endAudio.play();
      })
+
 
     function startGame() {
         // game = new Game();

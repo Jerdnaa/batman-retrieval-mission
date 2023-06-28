@@ -67,7 +67,7 @@ table {
     height: 4.3rem;
     width: 4.3rem;
     position: absolute;
-    top: 132px;
+    top: 129px;
     right: 560px;
 }
 
@@ -156,7 +156,7 @@ table {
     text-align: center;
     font-size: 2.2rem;
     width: 80%;
-    background-color: rgba(228,7,23,0.865983893557423);
+    background-color: rgba(228,7,23);
     border-radius: 6px;
     color: whitesmoke;
 }

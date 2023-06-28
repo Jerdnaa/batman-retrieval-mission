@@ -126,6 +126,8 @@ class Quiz {
       this.firstBoss = document.getElementById("first-boss");
       this.roomOne = document.querySelector(".room-one")
       this.gameOver = document.getElementById("game-over");
+      this.loseAudio = document.getElementById("loseAudio");
+      this.audio = document.getElementById("audio");
   }
 
   
@@ -169,6 +171,8 @@ class Quiz {
         console.log("Game Over");
         this.firstBoss.style.display = "none";
         this.gameOver.style.display = "flex";
+        this.audio.pause();
+        this.loseAudio.play();
       }
   }
 
