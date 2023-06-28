@@ -14,7 +14,7 @@ class Game {
 
     start(){
         this.startScreen.style.display = "none";
-        this.firstBoss.style.display = "flex";
+        this.firstBoss.style.display = "block";
         this.gameLoop();
     }
 

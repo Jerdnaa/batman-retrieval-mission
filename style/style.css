@@ -99,6 +99,21 @@ table {
     display: none;
 }
 
+.bald {
+    text-align: center;
+    font-size: 2rem;
+    color: #FDE311;
+    padding-top: 30px;
+}
+
+.avada {
+    position: absolute;
+    bottom: 320px;
+    right: 40px;
+    font-size: 1.3rem;
+    color: white;
+}
+
 .voldy {
     height: 200px;
     position: absolute;
