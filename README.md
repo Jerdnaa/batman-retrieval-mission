@@ -112,3 +112,4 @@ Batman Retrieval Mission is the first instalment of a series in which the main o
 
 - [Deployment](https://jerdnaa.github.io/batman-retrieval-mission/)
 - [GitHub Repository](https://github.com/Jerdnaa/batman-retrieval-mission)
+- [Presentation](https://docs.google.com/presentation/d/133utz6JxBCICXhh-twWf7M8XFz38jXAxxR-6TIzQqAc/edit?usp=sharing)
