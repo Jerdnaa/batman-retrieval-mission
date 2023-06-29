@@ -116,6 +116,7 @@ class Quiz {
           rightAnswer: "Jupiter"
         }
       ];
+      this.usedQuestions = [];
       this.currentQuestionIndex = null;
       this.question = document.getElementById("question")
       this.choices = document.querySelector("#answers");
@@ -130,50 +131,60 @@ class Quiz {
       this.audio = document.getElementById("audio");
   }
 
-  
-  updateChoices(){
-      this.quizScreen.style.display = "flex";
-      const random = Math.floor(Math.random() * this.questions.length);
-      this.currentQuestionIndex = random;
-      const chosenQuestion = this.questions[random];
-      const theQuestion = chosenQuestion.question;
-      const answerArr = chosenQuestion.choices;
-      const p = this.question
-      p.innerHTML = theQuestion;
-      this.choices.innerHTML = "";
-      answerArr.forEach((choice) => {
-          const oneAnswer = document.createElement("button");
-          oneAnswer.innerHTML = choice;
-          this.choices.appendChild(oneAnswer);
-          oneAnswer.addEventListener("click", () => {
-              this.selectedAnswer = choice;
-              this.checkAnswer();
-          })
-      }) 
+  updateChoices() {
+    this.quizScreen.style.display = "flex";
+    const randomIndex = this.getRandomQuestionIndex();
+    this.currentQuestionIndex = randomIndex;
+    const chosenQuestion = this.questions[randomIndex];
+    const theQuestion = chosenQuestion.question;
+    const answerArr = chosenQuestion.choices;
+    this.question.innerHTML = theQuestion;
+    this.choices.innerHTML = "";
+    answerArr.forEach((choice) => {
+      const oneAnswer = document.createElement("button");
+      oneAnswer.innerHTML = choice;
+      this.choices.appendChild(oneAnswer);
+      oneAnswer.addEventListener("click", () => {
+        this.selectedAnswer = choice;
+        this.checkAnswer();
+      });
+    });
   }
 
   checkAnswer() {
-      const currentQuestion = this.questions[this.currentQuestionIndex];
-      const correctAnswer = currentQuestion.rightAnswer;
+    const currentQuestion = this.questions[this.currentQuestionIndex];
+    const correctAnswer = currentQuestion.rightAnswer;
 
-      if (this.selectedAnswer === correctAnswer) {
-          this.correctAnswerCount++;
-          console.log(this.correctAnswerCount);
-          if(this.correctAnswerCount === 1 || this.correctAnswerCount === 2) {
-              this.selectedAnswer = null;
-              this.updateChoices();
-          } else if (this.correctAnswerCount === 3) {
-              console.log("Going to the next level pog")
-              this.firstBoss.style.display = "none";
-              this.roomOne.style.display = "flex";
-          } 
-      } else if (this.selectedAnswer !== correctAnswer) {
-        console.log("Game Over");
+    if (this.selectedAnswer === correctAnswer) {
+      this.correctAnswerCount++;
+      console.log(this.correctAnswerCount);
+      if (this.correctAnswerCount === 1 || this.correctAnswerCount === 2 || this.correctAnswerCount === 3) {
+        this.selectedAnswer = null;
+        this.updateChoices();
+      } else if (this.correctAnswerCount === 4) {
+        console.log("Going to the next level pog");
         this.firstBoss.style.display = "none";
-        this.gameOver.style.display = "flex";
-        this.audio.pause();
-        this.loseAudio.play();
+        this.roomOne.style.display = "flex";
       }
+    } else if (this.selectedAnswer !== correctAnswer) {
+      console.log("Game Over");
+      this.firstBoss.style.display = "none";
+      this.gameOver.style.display = "flex";
+      this.audio.pause();
+      this.loseAudio.play();
+    }
+  }
+
+  getRandomQuestionIndex() {
+    if (this.usedQuestions.length === this.questions.length) {
+      this.usedQuestions = [];
+    }
+    let randomIndex;
+    do {
+      randomIndex = Math.floor(Math.random() * this.questions.length);
+    } while (this.usedQuestions.includes(randomIndex));
+    this.usedQuestions.push(randomIndex);
+    return randomIndex;
   }
 
 }

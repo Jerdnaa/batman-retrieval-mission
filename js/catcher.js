@@ -15,6 +15,7 @@ class Catcher {
         this.audio = document.querySelector(".finalBossMusic");
         this.quiz = new Quiz();
         this.endScreenAudio = document.getElementById("endScreenAudio")
+        this.catsScore = document.querySelector("cat-caught");
         
 
         this.basket.src = "./images/basket.png"
@@ -69,7 +70,7 @@ class Catcher {
       
             const moveIntervalId = setInterval(() => {
               const currentPosition = parseInt(cat.style.top, 10);
-              const newPosition = currentPosition + 3; // Adjust the speed of falling cats here
+              const newPosition = currentPosition + 3; 
       
               if (newPosition >= this.catchGameScreen.offsetHeight) {
                 clearInterval(moveIntervalId);
@@ -79,12 +80,12 @@ class Catcher {
                 cat.style.top = newPosition + "px";
                 this.didCollide(cat)
               }
-            }, 20); // Adjust the interval duration for smoother animation
+            }, 20); 
       
             if (this.cats.length >= 10) {
               clearInterval(this.catRainIntervalId);
             }
-          }, 1500); // Adjust the interval duration between cats
+          }, 1500); 
         }
 
         didCollide(cat) {  
@@ -113,7 +114,7 @@ class Catcher {
                     } else {
                         this.catsCought += 1;
                         console.log(this.catsCought);
-                        if (this.catsCought === 10) {
+                        if (this.catsCought === 15) {
                             this.endGame();
                         }
                     }    

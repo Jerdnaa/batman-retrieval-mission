@@ -94,6 +94,7 @@ Batman Retrieval Mission is the first instalment of a series in which the main o
 - class Quiz;
 - updateChoices();
 - checkAnswer();
+- getRandomQuestionIndex();
 
 ### catcher.js
 
